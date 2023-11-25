@@ -1,16 +1,26 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function List() {
+  let products = [
+    "iPhone15",
+    "MacBook Pro",
+    "AirPods Pro",
+    "iPad Pro",
+    "iMac",
+    "Apple Watch",
+  ];
 
   return (
     <div>
       <h4 className="title">Apple</h4>
-      <div className='appleProduct'>
-        <h4>iPhone 15</h4>
-      </div>
-      <div className='appleProduct'>
-        <h4>MacBook Pro</h4>
-      </div>
+      {products.map((product, i) => {
+        return (
+          <div className="appleProduct" key={i}>
+            <img src={'/' + product + '.png'} className="appleProductImg"/>
+            <h4>{product}</h4>
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }

@@ -29,7 +29,7 @@ body {
 
 .appleProduct {
   margin: 20px auto;
-  width: 200px;
+  width: 400px;
   background: #444444;
   padding: 20px;
   border-radius: 16px;
@@ -46,3 +46,21 @@ body {
   margin-right: 10px;
   text-decoration: none;
 }
+
+.appleProduct img {
+  width: 400%;
+  height: auto;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.cart-item {
+  padding: 10px;
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+} 
