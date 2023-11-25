@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  background: #303030;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.title {
+  padding: 40px;
+  margin: 40px;
+  background: #555555;
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.description {
+  color: #888888;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.appleProduct {
+  margin: 20px auto;
+  width: 200px;
+  background: #444444;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.navBar {
+  text-align: left;
+  background: #ffffff;
+  padding: 20px;
+  color: #222222;
+}
+
+.navBar a {
+  margin-right: 10px;
+  text-decoration: none;
 }
