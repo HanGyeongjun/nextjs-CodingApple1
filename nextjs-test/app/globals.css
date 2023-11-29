@@ -64,3 +64,15 @@ body {
   border-bottom: 1px solid grey;
   line-height: 0px;
 } 
+
+.button {
+  background: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  color: #222222;
+  font-weight: 600;
+  font-size: medium;
+  text-decoration: none;
+}

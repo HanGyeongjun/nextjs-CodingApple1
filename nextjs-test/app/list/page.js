@@ -1,4 +1,6 @@
-import Image from "next/image";
+'use client'
+import Image from "next/image"
+import { useState } from "react"
 
 export default function List() {
   let products = [
@@ -8,7 +10,9 @@ export default function List() {
     "iPad Pro",
     "iMac",
     "Apple Watch",
-  ];
+  ]
+
+  let [quantityOfItem, changeQuantity] = useState([0, 0, 0, 0, 0, 0])
 
   return (
     <div>
@@ -17,7 +21,18 @@ export default function List() {
         return (
           <div className="appleProduct" key={i}>
             <img src={'/' + product + '.png'} className="appleProductImg"/>
-            <h4>{product}</h4>
+            <h4>{product} $999</h4>
+            <span> {quantityOfItem[i]} </span>
+            <button className="button" onClick={ ()=>{ 
+              let copy = [...quantityOfItem]
+              copy[i]++
+              changeQuantity(copy)
+              } }>+</button>
+            <button className="button" onClick={ ()=>{ 
+              let copy = [...quantityOfItem]
+              copy[i]--
+              changeQuantity(copy) 
+              } }>-</button>
           </div>
         );
       })}
